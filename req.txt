@@ -1,0 +1,26 @@
+asgiref==3.8.1
+    # via django
+certifi==2024.6.2
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
+django==5.0.6
+    # via -r requirements.in
+idna==3.7
+    # via requests
+joblib==1.4.2
+    # via -r requirements.in
+numpy==1.25.2
+    # via -r requirements.in
+requests==2.32.3
+    # via -r requirements.in
+sqlparse==0.5.0
+    # via django
+typing-extensions==4.12.2
+    # via asgiref
+urllib3==2.2.2
+    # via requests
+pandas==2.0.3
+    # via requests
+openpyxl==3.1.4
+    # via requests
