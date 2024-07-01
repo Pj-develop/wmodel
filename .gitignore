@@ -1,0 +1,7 @@
+# Ignore .env files
+*.env
+
+# Ignore machine learning models
+*.pkl
+*.h5
+*.xlsx
