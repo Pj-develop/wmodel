@@ -1,0 +1,1 @@
+$env:DATABASE_URL="DATABSE_URL" for powershell window

@@ -24,3 +24,6 @@ pandas==2.0.3
     # via requests
 openpyxl==3.1.4
     # via requests
+psycopg2
+dj-database-url
+gunicorn

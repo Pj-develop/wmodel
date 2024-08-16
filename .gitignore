@@ -2,6 +2,6 @@
 *.env
 
 # Ignore machine learning models
-*.pkl
-*.h5
-*.xlsx
+# *.pkl
+# *.h5
+# *.xlsx
