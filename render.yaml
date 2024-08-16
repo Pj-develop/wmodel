@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: my-web-service
+    env: python
+    buildCommand: "pip install -r req.txt"
+    startCommand: "python manage.py runserver"
+    pythonVersion: 3.10.12
