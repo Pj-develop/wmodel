@@ -13,11 +13,22 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+
+import environ
+
+env = environ.Env()
+environ.Env.read_env()  # read .env file if present
+
+DATABASE_URL = env('DATABASE_URL', default='')
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#For Debug only on production server        
-print(f"DATABASE_URL: {os.getenv('DATABASE_URL')}")
+
+#For Debug only on production server       
+##DATABASE_URL: {{os.getenv('DATABASE_URL')}} 
+print(f"DATABASE_URL: {{os.getenv('DATABASE_URL')}}" )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -78,10 +89,17 @@ WSGI_APPLICATION = 'wmodel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# Replace the SQLite DATABASES configuration with PostgreSQL:
+# Print the DATABASE_URL to verify it's set
+print(f"DATABASE_URL from settings: {DATABASE_URL}")
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': env.db('DATABASE_URL', default='postgresql://wmodel_sql_user:3d1Vi8ML43msaoXczi4TuFU3VcOUx9jJ@dpg-cqvfbr8gph6c738qjj60-a/wmodel_sql')
 }
+
+# # Replace the SQLite DATABASES configuration with PostgreSQL:
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 
 # Password validation
