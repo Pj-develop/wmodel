@@ -175,12 +175,12 @@ def show_weather_data(date_w,time_w,pincode_w):
                 zipcode=str(pincode)
                 )
                 #removing backend storage
-                # weather.save()
+                weather.save()
                 Sum_DeltaT+=DeltaT_Array[i]
                 
             output=OutputV1(remark_text=f"Solidification depends on sum of delta T for 3 hours is {Sum_DeltaT} with input date: {date_w} time{time_w} for pincode {pincode} and input array is {Data_Array} and output array is {DeltaT_Array} ", avg_delta_t=Sum_DeltaT)
             #removing backend storage
-            # output.save()
+            output.save()
             
             # print("GBMODEL ARRAY")
             # print(GBModel_Array)

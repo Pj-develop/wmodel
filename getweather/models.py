@@ -18,7 +18,7 @@ class WeatherV1(models.Model):
         return header
 
 class OutputV1(models.Model):
-    remark_text = models.CharField(max_length=200)
+    remark_text = models.CharField(max_length=2000)
     avg_delta_t = models.    delta_t = models.FloatField()
     def __str__(self):
         return self.remark_text
